@@ -1,4 +1,4 @@
-FROM node:14.21.3-alpine3.17
+FROM node:14.21.3-slim
 
 # Create app directory
 WORKDIR /usr/src/meta
