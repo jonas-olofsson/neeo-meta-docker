@@ -1,4 +1,5 @@
 FROM node:14.21.3-slim
+RUN apt-get update && apt-get install wget -y
 
 # Create app directory
 WORKDIR /usr/src/meta
