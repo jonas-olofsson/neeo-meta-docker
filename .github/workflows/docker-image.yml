@@ -21,4 +21,4 @@ jobs:
         username: ${{ secrets.DOCKER_HUB_USERNAME }}
         password: ${{ secrets.DOCKER_HUB_PASSWORD }}
     - name: Build the Docker image
-      run: docker buildx build --platform linux/arm/v7 -t jonolo/neeo-meta:latest --push .
+      run: docker buildx build --platform linux/arm/v7 -t jonolo75/neeo-meta:latest --push .
