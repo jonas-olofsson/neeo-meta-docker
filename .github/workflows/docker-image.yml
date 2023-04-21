@@ -20,5 +20,7 @@ jobs:
       with:
         username: ${{ secrets.DOCKER_HUB_USERNAME }}
         password: ${{ secrets.DOCKER_HUB_PASSWORD }}
-    - name: Build the Docker image
-      run: docker buildx build --platform=linux/arm/v7,linux/amd64,linux/arm64 -t jonolo75/neeo-meta:latest --push .
+    - name: Build the Docker image for armv7
+      run: docker buildx build --platform=linux/arm/v7 -t jonolo75/neeo-meta:latest --push .
+    - name: Build the Docker image for arm64/v8
+      run: docker buildx build --platform=linux/arm64/v8 -t jonolo75/neeo-meta:arm64 --push .
